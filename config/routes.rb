@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    get '/' => 'products#index'
+    get '/' => 'products#index', as: :products_path
 
     post '/add' => 'products#add'
 

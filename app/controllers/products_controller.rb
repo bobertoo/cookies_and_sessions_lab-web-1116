@@ -4,8 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def add
-    @product = params[:product]
-    cart << @product
-    render :index
+    session[:cart] << params[:product]
+    redirect_to :products_path
   end
 end
