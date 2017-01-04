@@ -1,12 +1,11 @@
 class ProductsController < ApplicationController
   def index
-    cart
+    @cart = cart
   end
 
   def add
     @product = params[:product]
     cart << @product
-    # binding.pry
     render :index
   end
 end
